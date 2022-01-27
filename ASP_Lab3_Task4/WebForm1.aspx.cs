@@ -14,7 +14,7 @@ namespace ASP_Lab3_Task1
 
         }
 
-        protected void Password_ServerValidate(object source, ServerValidateEventArgs args)
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
             if (args.Value.Length < 6)
             {

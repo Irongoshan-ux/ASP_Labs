@@ -39,7 +39,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="The field should be not null" ControlToValidate="TextBox5"/>
-            <asp:CustomValidator ID="Password" ErrorMessage="Invalid password" runat="server" ControlToValidate="TextBox5" OnServerValidate="Password_ServerValidate" />
+            <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Invalid password" ControlToValidate="TextBox5" OnServerValidate="CustomValidator1_ServerValidate"/>
             <br />
 
             <asp:Label ID="Label5" runat="server" Text="Confirm Password"></asp:Label>
