@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_Lab1", "ASP_Lab1\ASP_Lab1.csproj", "{59FD85DC-A6F0-4A15-BEF6-A4B202E0E39F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_Lab2", "ASP_Lab2\ASP_Lab2.csproj", "{2F4CFEC6-46CB-4C06-A8B8-06506F57120E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59FD85DC-A6F0-4A15-BEF6-A4B202E0E39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59FD85DC-A6F0-4A15-BEF6-A4B202E0E39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59FD85DC-A6F0-4A15-BEF6-A4B202E0E39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59FD85DC-A6F0-4A15-BEF6-A4B202E0E39F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4CFEC6-46CB-4C06-A8B8-06506F57120E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4CFEC6-46CB-4C06-A8B8-06506F57120E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4CFEC6-46CB-4C06-A8B8-06506F57120E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4CFEC6-46CB-4C06-A8B8-06506F57120E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51605568-55CD-4791-BD68-8D2214518B04}
+	EndGlobalSection
+EndGlobal
