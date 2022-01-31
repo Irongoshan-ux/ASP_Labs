@@ -9,6 +9,11 @@ namespace ASP_Lab5
 {
     public partial class Page3 : System.Web.UI.Page
     {
+        protected override void OnPreInit(EventArgs e)
+        {
+            MasterPageManager.ChangeMasterPage(Request, this);
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

@@ -11,16 +11,7 @@ namespace ASP_Lab5
     {
         protected override void OnPreInit(EventArgs e)
         {
-            Page.MasterPageFile = MasterPageManager.GetMasterPage(Request);
-
-            if (Request["btnGreen"] != null)
-                Page.MasterPageFile = "~/Site2.Master";
-
-        }
-
-        protected void Page_PreInit()
-        {
-            
+            MasterPageManager.ChangeMasterPage(Request, this);
         }
 
         protected void Page_Load(object sender, EventArgs e)

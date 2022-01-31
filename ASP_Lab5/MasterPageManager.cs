@@ -1,30 +1,21 @@
 ﻿using System.Web;
+using System.Web.UI;
 
 namespace ASP_Lab5
 {
     public static class MasterPageManager
     {
-        private const string HeaderName = "MasterPage";
-        private const string MasterPage1Name = "~/Site1.Master";
-        private const string MasterPage2Name = "~/Site2.Master";
-
-        public static void ChangeMasterPage(HttpRequest request, int page)
+        public static void ChangeMasterPage(HttpRequest request,
+                                            Page page)
         {
-            request.Headers.Add(HeaderName, page.ToString());
-        }
-
-        public static string GetMasterPage(HttpRequest request)
-        {
-            switch (request.Headers[HeaderName])
+            if (request["masterPage1"] != null)
             {
-                case MasterPage1Name:
-                    return MasterPage1Name;
-                case MasterPage2Name: 
-                    return MasterPage2Name;
-                default:
-                    return MasterPage1Name;
+                page.MasterPageFile = "~/Site1.Master";
             }
-
+            else if (request["masterPage2"] != null)
+            {
+                page.MasterPageFile = "~/Site2.Master";
+            }
         }
     }
 }

@@ -17,7 +17,7 @@
         <asp:SiteMapPath ID="SiteMapPath1" runat="server">
         </asp:SiteMapPath>
             <br />
-            <br />
+            <img alt="109,403 Number Two Stock Photos and Images - 123RF" class="n3VNCb" data-noaft="1" jsaction="load:XAeZkd;" jsname="HiaYvf" src="https://us.123rf.com/450wm/rondale/rondale1507/rondale150700036/42499284-illustration-of-realistic-retro-signboard-number-2-two-.jpg?ver=6" style="width: 159px; height: 145px; margin: 0px;" /><br />
             ЭТО ВТОРАЯ МАСТЕР-СТРАНИЦА<br />
         </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -27,8 +27,7 @@
         </asp:TreeView>
         <asp:XmlDataSource ID="XmlDataSource1" runat="server" datafile="web.sitemap"></asp:XmlDataSource>
         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-        <input type="submit" name="btnGreen" value="Green" />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Изменить мастер-страницу" />
+        <input type="submit" name="masterPage1" value="Изменить мастер-страницу" />
         <br />
         <em>Footer</em>
     </form>

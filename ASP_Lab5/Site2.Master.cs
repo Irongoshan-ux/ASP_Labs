@@ -27,13 +27,5 @@ namespace ASP_Lab5
         {
 
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            MasterPageManager.ChangeMasterPage(Request, 1);
-
-            var path = Page.Request.Path;
-            Response.Redirect(path);
-        }
     }
 }

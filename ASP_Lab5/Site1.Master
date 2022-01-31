@@ -17,7 +17,7 @@
         <asp:SiteMapPath ID="SiteMapPath1" runat="server">
         </asp:SiteMapPath>
             <br />
-            <br />
+            <img alt="One 1 Number - Free image on Pixabay" class="n3VNCb" data-noaft="1" jsaction="load:XAeZkd;" jsname="HiaYvf" src="https://cdn.pixabay.com/photo/2015/04/04/19/13/one-706897_1280.jpg" style="width: 161px; height: 146px; margin: 0px;" /><br />
             Это первая мастер-страница<br />
         </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -27,8 +27,7 @@
         </asp:TreeView>
         <asp:XmlDataSource ID="XmlDataSource1" runat="server" datafile="web.sitemap"></asp:XmlDataSource>
         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-        <input type="submit" name="btnGreen" value="Green" />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Изменить мастер-страницу" />
+        <input type="submit" name="masterPage2" value="Изменить мастер-страницу" />
         <br />
         <em>Footer</em>
     </form>
