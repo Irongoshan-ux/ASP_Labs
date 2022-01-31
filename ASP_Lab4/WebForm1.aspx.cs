@@ -76,21 +76,14 @@ namespace ASP_Lab4
         {
             IncrementMistake();
 
-            Response.Redirect(nameof(WebForm1), true);
+            OnPreRenderComplete(e);
         }
 
         private void IncrementMistake()
         {
-            var isInt = int.TryParse(GetMistakes(), out int mistakes);
+            var mistakes = int.Parse(GetMistakes());
 
-            if (isInt)
-            {
-                Application["Mistakes"] = mistakes + 1;
-            }
-            else
-            {
-                Application.Add("Mistakes", 1);
-            }
+            Application["Mistakes"] = mistakes + 1;
         }
 
         public string GetMistakes()
@@ -101,15 +94,23 @@ namespace ASP_Lab4
             }
             catch
             {
-                Application.Add("Mistakes", 1);
-                return "1";
+                Application.Add("Mistakes", 0);
+                return "0";
             }
         }
 
         protected override void OnPreRenderComplete(EventArgs e)
         {
-            if (Message.Visible || CorrectResultsCount.Visible) return;
+            if (Message.Visible || CorrectResultsCount.Visible) 
+                return;
 
+            GenerateTask();
+
+            base.OnPreRenderComplete(e);
+        }
+
+        private void GenerateTask()
+        {
             var firstNumber = random.Next(-10, 10);
             var secondNumber = random.Next(-10, 10);
 
@@ -119,8 +120,6 @@ namespace ASP_Lab4
             Operation.Text = GetOperator(GetRandomOperation());
 
             CorrectResult.Text = GetResult(Operation.Text, firstNumber, secondNumber).ToString();
-
-            base.OnPreRenderComplete(e);
         }
 
         protected void Result_TextChanged(object sender, EventArgs e)
@@ -129,21 +128,26 @@ namespace ASP_Lab4
 
             if (Result.Text.Equals(CorrectResult.Text))
             {
-                if (string.IsNullOrWhiteSpace(HiddenResultsCount.Value))
-                {
-                    HiddenResultsCount.Value = "1";
-                }
-                else HiddenResultsCount.Value = (int.Parse(HiddenResultsCount.Value) + 1).ToString();
-
-                Message.Visible = false;
-
-                OnPreRenderComplete(EventArgs.Empty);
+                HandleSuccessAnswer();
             }
             else
             {
                 Message.Visible = true;
                 IncrementMistake();
             }
+        }
+
+        private void HandleSuccessAnswer()
+        {
+            if (string.IsNullOrWhiteSpace(HiddenResultsCount.Value))
+            {
+                HiddenResultsCount.Value = "1";
+            }
+            else HiddenResultsCount.Value = (int.Parse(HiddenResultsCount.Value) + 1).ToString();
+
+            Message.Visible = false;
+
+            OnPreRenderComplete(EventArgs.Empty);
         }
 
         protected void Results_Click(object sender, EventArgs e)
