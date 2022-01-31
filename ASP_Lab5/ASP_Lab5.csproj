@@ -193,7 +193,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Page1.aspx.cs">
+    <Compile Include="MasterPageManager.cs" />
+    <Compile Include="Page1.cs">
       <DependentUpon>Page1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

@@ -27,6 +27,7 @@
         </asp:TreeView>
         <asp:XmlDataSource ID="XmlDataSource1" runat="server" datafile="web.sitemap"></asp:XmlDataSource>
         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        <input type="submit" name="btnGreen" value="Green" />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Изменить мастер-страницу" />
         <br />
         <em>Footer</em>

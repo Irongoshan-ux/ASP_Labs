@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,9 +10,17 @@ namespace ASP_Lab5
 {
     public partial class Site2 : System.Web.UI.MasterPage
     {
-        protected void Page_PreInit()
+        protected void Page_PreInit(object sender, EventArgs e)
         {
+            if (Request.Headers["MasterPage"] == "2")
+            {
+                Page.MasterPageFile = "~/Site2.Master";
+            }
 
+            if (Request.Headers["MasterPage"] == "1")
+            {
+                Page.MasterPageFile = "~/Site1.Master";
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -21,7 +30,10 @@ namespace ASP_Lab5
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            this.MasterPageFile = "~/Site2.Naster";
+            MasterPageManager.ChangeMasterPage(Request, 1);
+
+            var path = Page.Request.Path;
+            Response.Redirect(path);
         }
     }
 }

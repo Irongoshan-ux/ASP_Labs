@@ -11,7 +11,7 @@ namespace ASP_Lab5
 {
 
 
-    public partial class Page1WithMaster
+    public partial class Page1
     {
     }
 }
