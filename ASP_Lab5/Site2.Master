@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.Master.cs" Inherits="ASP_Lab5.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <em>Header</em>
+        <br />
+
+        <div>
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+        </asp:SiteMapPath>
+            <br />
+            <br />
+            ЭТО ВТОРАЯ МАСТЕР-СТРАНИЦА<br />
+        </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        <br />
+        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" Height="182px" Width="168px">
+        </asp:TreeView>
+        <asp:XmlDataSource ID="XmlDataSource1" runat="server" datafile="web.sitemap"></asp:XmlDataSource>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Изменить мастер-страницу" />
+        <br />
+        <em>Footer</em>
+    </form>
+</body>
+</html>
